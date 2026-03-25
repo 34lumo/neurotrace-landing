@@ -35,8 +35,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-# Large frame sequence (do not commit)
-public/sequence/
-public/sequence/**/*.png
 sequence/
 sequence.zip
+
+# Videos
+*.mp4
