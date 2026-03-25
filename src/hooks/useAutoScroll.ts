@@ -69,7 +69,7 @@ export function useAutoScroll(): void {
     window.addEventListener("keydown", onUserInteraction, KEY_OPTS);
     window.addEventListener("mousedown", onUserInteraction, LISTENER_OPTS);
 
-    timeoutId = window.setTimeout(() => {
+    timeoutId = setTimeout(() => {
       timeoutId = undefined;
       if (!stopped) start();
     }, START_DELAY_MS);

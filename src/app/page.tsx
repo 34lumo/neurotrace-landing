@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CTASection } from "@/components/CTASection";
 import { OnboardingOverlay } from "@/components/OnboardingOverlay";
 import { ScrollyCanvas } from "@/components/ScrollyCanvas";
@@ -10,6 +10,11 @@ import { useSnapSections } from "@/hooks/useSnapSections";
 
 export default function Home() {
   const [onboardingOpen, setOnboardingOpen] = useState(false);
+
+  useEffect(() => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    window.scrollTo(0, max * 0.08);
+  }, []);
 
   useAutoScroll();
   useSnapSections();
